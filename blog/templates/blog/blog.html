@@ -1,0 +1,7 @@
+{% extends 'personal/base.html' %}
+
+{% block content %}
+    {% for post in list_objects %}
+        <h5>{{ post.date|date:"Y-m-d" }}<a href="{{ url 'post.id' }}">{{ post.title }}</a></h5>
+    {% endfor %}
+{% endblock %}
